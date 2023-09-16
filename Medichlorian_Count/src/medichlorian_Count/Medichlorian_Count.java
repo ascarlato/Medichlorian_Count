@@ -1,13 +1,55 @@
 package medichlorian_Count;
 
+import java.util.Scanner;
+
 public class Medichlorian_Count {
 
 	public static void main(String[] args) {
 		
+		//USER GREETING
+		System.out.println("In a Galaxy Far Far Away...");
+		
+		//DECLARING VARIABLES
+		int medichlorianCount = 0;
+		
+		
+		//MANUAL ENTRY 
+		String anakinSkywalker = "Anakin Skywalker";
+		int anakinSkywalkerCount = 27700;
+		
+		String darthSidious = "Darth Sidious";
+		int darthSidiousCount = 20500;
+				
+		//USING A MAP (More Efficient)
+		 // Create a map to store character names and their Medichlorian Counts
+       // Map<String, Integer> characterCounts = new HashMap<>();
+        //characterCounts.put("Anakin Skywalker", 27700);
+        //characterCounts.put("Darth Sidious", 20500);
+        // Add more characters and their counts as needed
+		
+		System.out.println("To find out what your characters Medichlorian Count is, please enter their name:");
+		Scanner userInput = new Scanner(System.in);
+		String characterName = userInput.nextLine();
+		
+		
+		 if (characterName.equalsIgnoreCase(anakinSkywalker)) {
+	            medichlorianCount = anakinSkywalkerCount;
+	        } 
+		 
+		 else if (characterName.equalsIgnoreCase(darthSidious)) {
+	            medichlorianCount = darthSidiousCount;
+	        } 
+		 
+		 else {
+	            System.out.println("Character not found. Medichlorian Count unknown.");
+	        }
+
+		
+		System.out.println("You entered: " + characterName + "\n Their Medichlorian Count is: " + medichlorianCount);
 		
 	
-
-
+				
+				
 		/*
 		Anakin Skywalker/Darth Vader = 27,700 
 		Darth Sidious/Palpatine (with Kyber Crystal) = 20,500 
@@ -73,8 +115,7 @@ public class Medichlorian_Count {
 		Jango Fett = 1,500
 		Owen Lars = 1,500
 		*/
-		
-	System.out.println("In a Galaxy Far Far Away...");
+
 	
 	}
 
